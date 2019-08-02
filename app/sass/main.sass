@@ -1022,6 +1022,8 @@ footer
   padding: 0 0 109px
   .btn-details
     margin: 20px 0 0
+  .box-img
+    display: none
 
 .rent-section
   background: #000
@@ -1091,6 +1093,17 @@ footer
     min-width: 234px
   .price
     margin: 0
+  .line-text
+    display: flex
+    align-items: center
+    //flex-wrap: wrap
+
+.view-photo
+  letter-spacing: 0.05em
+  text-decoration: underline
+  color: #FFFFFF
+  font-size: 16px
+  font-weight: 500
 
 
 .table-header
@@ -1115,14 +1128,18 @@ footer
   font-size: 20px
   letter-spacing: 0.05em
   .body-length
-    width: 105px
+    width: 70px
   .name
     font-weight: 900
     font-size: 20px
   .photo
     opacity: .2
     transition: .3s ease
-
+  h5
+    font-size: 16px
+    margin: 0 5px 0 0
+    color: rgba(#fff, .3)
+    display: none
 
 .btn-order
   height: 100px
@@ -1247,7 +1264,7 @@ footer
     position: absolute
     left: 0
     top: 0
-    width: calc(100% - 940px)
+    width: 60%
     height: 100%
     background: #000
     z-index: 1
@@ -1322,6 +1339,9 @@ footer
     font-weight: normal
   .image
     margin: auto 0 0 0
+    width: 100%
+    img
+      width: 100%
   h3
     text-align: center
     color: #fff
@@ -1407,6 +1427,25 @@ footer
     height: 20px
   &:focus
     background: #FFC52D
+
+//sorting-wrapper
+.sorting-wrapper
+  width: 100%
+  display: none
+  align-items: center
+  flex-wrap: wrap
+  font-size: 16px
+  color: rgba(#fff, .5)
+  font-weight: 500
+  select
+    margin: 0 0 0 5px
+    padding: 0 17px 0 0
+    -webkit-appearance: none
+    font-size: 16px
+    border: none
+    color: #FFC52D
+    background: url("../img/arr-select.png") no-repeat 98% center
+      size: 7px
 
 
 @import "modal"
