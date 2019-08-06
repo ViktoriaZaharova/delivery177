@@ -111,6 +111,7 @@ h2
 
 button, .btn-primary, .btn
   outline: none
+  padding: 0
   box-shadow: none
   border: none
     radius: 0
@@ -120,6 +121,7 @@ button, .btn-primary, .btn
   text-align: center
   margin: 0
   position: relative
+  box-sizing: border-box
   &:hover, &:focus
     outline: none
     box-shadow: none
@@ -143,11 +145,11 @@ button, .btn-primary, .btn
     content: ''
     position: absolute
     left: 0
-    top: 0
-    width: 100%
-    height: 100%
+    top: 50%
+    width: calc(100% - 4px)
+    height: calc(100% - 2px)
     border: 4px solid #000
-    transform: skew(-10deg)
+    transform: skew(-10deg) translate(0,-50%)
     transition: .3s ease
   &:hover
     &:before
@@ -217,6 +219,7 @@ textarea
 main
   position: relative
   height: 1000px
+  //overflow: hidden
   .bg-top, .bg-center, .bg-bottom
     position: absolute
     left: 0
@@ -235,7 +238,7 @@ main
 
   .bg-top
     z-index: 3
-    bottom: 0
+    bottom: -27px
     top: auto
   .bg-center
     z-index: 2
@@ -250,7 +253,7 @@ main
     align-items: center
     justify-content: center
     flex-wrap: wrap
-    margin: 164px 0 0
+    margin: 150px 0 0
     position: relative
     z-index: 1
     h1
@@ -274,20 +277,26 @@ main
   justify-content: center
   color: #fff
   text-align: center
-  //width: 426px
+  width: 426px
   border: 4px solid #FFFFFF
   font-size: 40px
   font-weight: 900
   letter-spacing: 0.1em
   position: relative
   z-index: 4
-  margin: 0 0 143px
   &:hover
     background: #fff
     color: #000
 
+.menu-item-wrapper
+  padding: 0 15px 143px
+  &:last-child
+    .menu-item
+      margin: 0 0 0 auto
+
+
 header
-  padding: 31px 30px 17px
+  padding: 31px 45px 28px
   .phone
     margin: 0 54px 0 0
   .logo
@@ -309,9 +318,12 @@ svg
     display: flex
     flex-direction: column
     align-items: center
-    margin: -25px 0 0 0
+    //margin: -25px 0 0 0
+    position: relative
     .icon-arrow
-      margin: 0 auto 16px
+      top: -38px
+      left: 50%
+      transform: translate(0,-50%)
       width: 22px
       height: 11px
       display: flex
@@ -351,7 +363,7 @@ svg
         position: absolute
         left: 40%
         transform: translate(0,-50%)
-        top: -40px
+        top: -33px
         width: 22px
         height: 11px
         display: flex
@@ -429,8 +441,8 @@ svg
 //delivery-section
 .delivery-section
   padding: 46px 0 490px
-  background: url("../img/bg3.jpg") no-repeat center bottom #000
-    size: cover
+  background: url("../img/bg3.png") no-repeat center bottom #000
+    size: 100%
   color: #fff
   h2
     font-size: 48px
@@ -443,12 +455,17 @@ svg
     max-width: 600px
     margin: 0 0 0 auto
 
+.image-location
+  max-width: 525px
+  max-height: 322px
+
 //info-section
 .info-section
   padding: 96px 0 0
   overflow: hidden
   h2
     font-size: 32px
+    letter-spacing: 0.1em
   .title
     margin: 0 0 93px
 
@@ -485,10 +502,11 @@ svg
 .info-section__box
   position: relative
   width: 599px
+  min-width: 599px
   background: #FFFFFF
-  margin: 0 0 40px
-  &:last-child
-    margin: 0 -29% 40px 0
+  margin: 0 30px 40px 0
+  //&:last-child
+  //  margin: 0 -29% 40px 0
   .image
     height: 287px
     display: flex
@@ -539,13 +557,26 @@ svg
   font-weight: 500
   font-size: 16px
 
+.info-section__content-wrap
+  overflow-x: scroll
+  padding: 0
+  width: 100%
+
+
 
 .info-section__content
   width: 100%
   display: flex
   align-items: flex-start
-  flex-wrap: wrap
+  flex-wrap: nowrap
   justify-content: space-between
+  overflow-x: scroll
+  margin: 0 0 30px auto
+  max-width: calc(100% - 219px)
+
+
+
+
 
 //contacts-section
 .contacts-section
@@ -558,6 +589,8 @@ svg
     letter-spacing: 0
     margin: 84px 0 47px
     width: 100%
+  h2
+    letter-spacing: 0.1em
 
 .mail
   display: flex
@@ -575,6 +608,7 @@ svg
 .callback-box
   h2
     font-weight: 500
+    font-size: 28px
   .description
     font-size: 20px
     font-weight: 300
@@ -608,9 +642,12 @@ form
       font-size: 20px
     &:focus, &:valid
       height: 32px
+      font-weight: bold
+      font-size: 20px
       ~ label
           font-size: 16px
           top: -20px
+
   [name='message']
     height: 84px
     &:focus, &:valid
@@ -630,7 +667,7 @@ form
 
 //footer
 footer
-  padding: 60px 0
+  padding: 20px 0 60px
   p
     color: #D2D2D2
     font-size: 14px
@@ -751,9 +788,15 @@ footer
       border-radius: 50%
 
 .read-also
-  margin: 60px 0 100px
+  margin: 60px 0
   .info-section__content
     margin: 60px 0 0
+
+.articles-section-page
+  .info-section__content
+    justify-content: flex-start
+    max-width: none
+    padding: 0 15px
     .info-section__box
       .text
         p
@@ -787,10 +830,13 @@ footer
 //catalog
 .catalog-wrapper
   margin: 58px 0 0
+  .p-50
+    padding: 0 50px
 
 .catalog
   .description-about
-    margin: 100px 0 72px
+    margin: 55px 0 72px
+
 
 .main-catalog
   width: 100%

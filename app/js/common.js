@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.info-section__box .name').click(function () {
+    $('.info-section__box').hover(function () {
         $(this).find('.description').slideToggle();
     });
 

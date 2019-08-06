@@ -3,6 +3,10 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
+@media only screen and (max-width : 1640px)
+  header
+    padding: 28px 10px
+
 @media only screen and (max-width : 1620px)
   header
     .logo
@@ -22,6 +26,12 @@
     width: 226px
     height: 65px
     font-size: 20px
+
+  .info-section__content
+    max-width: calc(100% - 50px)
+
+  .container
+    padding: 0 50px
 
 @media only screen and (max-width : 1500px)
   .info-section__box
@@ -135,8 +145,6 @@
 
   .delivery-section
     padding: 109px 0 546px
-    -webkit-background-size: 120%
-    background-size: 120%
     .title
       height: 100%
       display: flex
@@ -145,10 +153,9 @@
       justify-content: center
 
   .info-section__box
-    margin: 0 0 49px
-
-    &:last-child
-      margin: 0 -24% 49px 0
+    margin: 0 30px 49px 0
+    width: 510px
+    min-width: 510px
 
   .services-page .subtitle
     font-size: 80px
@@ -170,6 +177,10 @@
 
   .materials-box
     width: 215px
+
+  .menu-item
+    width: 395px
+
 
 
 /* Medium Devices, Desktops */
@@ -272,15 +283,14 @@
       max-width: none
 
 
+
+
+
+
 @media only screen and (max-width : 1260px)
   .info-section__box
     width: 475px
-
-    &:nth-child(2)
-      order: 1
-      margin: 0 -37% 49px 0
-    &:last-child
-      margin: 0 0 49px 0
+    min-width: 475px
 
   .info-section
     padding: 74px 0 0
@@ -300,8 +310,13 @@
     width: 210px
     min-width: 210px
 
+  .menu-item
+    width: 304px
+    height: 77px
+    font-size: 30px
 
-@media only screen and (max-width : 1200px)
+
+@media only screen and (max-width : 1199px)
   header
     padding: 19px 5px 17px
 
@@ -327,9 +342,7 @@
     max-width: 500px
 
   .delivery-section
-    -webkit-background-size: 140%
-    background-size: 140%
-    padding: 0 0 436px
+    padding: 0 0 454px
     h2
       font-size: 36px
       line-height: 42px
@@ -348,6 +361,49 @@
     width: 160px
     min-width: 160px
 
+
+  .legal-information
+    display: none
+
+  .container
+    max-width: 1010px
+
+
+  .contacts-wrapper
+    .contacts-page
+      .subtitle
+        margin: 0
+
+      .callback-box
+        margin: 49px 0 0
+      .contacts-section__box
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        align-items: center
+        justify-content: space-between
+        .phone
+          margin: 28px 0 52px
+          font-size: 114px
+          line-height: 124px
+    form
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      .line
+        width: 65%
+        .form-group
+          width: 47%
+      .form-group
+        width: 100%
+      .form-name
+        width: 30%
+
+  .info-section__content
+    max-width: calc(100% - 110px)
+
+  .container
+    padding: 0 15px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 1160px)
@@ -396,6 +452,7 @@
 @media only screen and (max-width : 1100px)
   .info-section__box
     width: 420px
+    min-width: 420px
     .text
       flex-wrap: wrap
     .name
@@ -419,10 +476,8 @@
       h1
         font-size: 16px
 
-  .menu-item
-    margin: 0 0 43px
-    height: 77px
-    font-size: 30px
+  .menu-item-wrapper
+    padding: 0 15px 43px
 
   header
     padding: 19px 0 17px
@@ -463,37 +518,17 @@
     width: 70px
     min-width: 70px
 
-@media only screen and (max-width : 992px)
-  .contacts-wrapper
-    .contacts-page
-      .subtitle
-        margin: 0
-      .contacts-section__box
-        display: flex
-        flex-direction: row
-        flex-wrap: wrap
-        align-items: center
-        justify-content: space-between
-        .phone
-          margin: 28px 0
-    form
-      display: flex
-      flex-wrap: wrap
-      justify-content: space-between
-      .line
-        width: 65%
-        .form-group
-          width: 47%
-      .form-group
-        width: 100%
-      .form-name
-        width: 30%
+  .info-section__content
+    max-width: 100%
+    padding: 0 0 0 15px
+    margin: 0
 
-  .legal-information
-    display: flex
-    align-items: center
-    flex-wrap: wrap
-    order: 1
+  .consent
+    margin: 40px 0 0 0
+
+  .callback-box
+    margin: 49px 0 0 0
+
 
 
 @media only screen and (max-width : 975px)
@@ -508,6 +543,8 @@
     .icon-arrow
       width: 14px
       height: 7px
+      top: -17px
+
 
   .phone
     font-size: 14px
@@ -523,13 +560,7 @@
     padding: 72px 0 0 0
     .title
       margin: 0 0 49px
-  .info-section__box
-    margin: 0 0 49px
-    width: 518px
-    &:nth-child(2)
-      display: none
-    &:last-child
-      margin: 0 -44% 49px
+
 
   .materials-page
     background:
@@ -594,7 +625,10 @@
         .icon
           margin: 0
 
-
+  .menu-item
+    width: 223px
+    height: 58px
+    font-size: 20px
 
 @media only screen and (max-width : 950px)
   .btn-burger
@@ -608,6 +642,26 @@
       order: -1
     .btn-burger
       margin: 0 auto 0 24px
+
+  .main-header
+    .btn-burger
+      display: none
+    .header-menu
+      display: flex
+      li
+        a
+          font-size: 10px
+    .logo
+      order: inherit
+    .phone
+      font-size: 10px
+      margin: 0 30px 0 0
+    .btn-border
+      font-size: 10px
+
+  .btn-border
+    &:before
+      border-width: 2px
 
 @media only screen and (max-width : 870px)
   main
@@ -633,6 +687,10 @@
 
   .phone
     font-size: 10px
+
+  .advantages
+    .container
+      max-width: 662px
 
   .advantages-box
     flex-direction: column
@@ -710,9 +768,24 @@
       margin: 22px 0 6px
       max-width: 340px
 
-@media only screen and (max-width : 768px)
+  .info-section__box
+    width: 407px
+    min-width: 407px
+    margin: 0 23px 49px 0
+
+@media only screen and (max-width : 767px)
   .about
     padding: 0 0 45px
+    background-position: 120% 80%
+    -webkit-background-size: 639px
+    background-size: 639px
+    position: relative
+    z-index: 1
+
+  .about-company
+    max-width: 328px
+    span
+      line-height: 26px
 
   .info-section
     padding: 73px 0 75px
@@ -798,13 +871,39 @@
       width: 100%
       margin: 0 0 30px
 
+  .contacts-wrapper
+    .contacts-page
+      .contacts-section__box
+        .phone
+          font-size: 132px
+          line-height: 143px
+
+  .legal-information
+    margin: 49px 0 0 0
+
+  .btn-border
+    font-size: 12px
+    line-height: 14px
+    &:before
+      border-width: 3px
+
+  .phone
+    font-size: 18px
+    letter-spacing: 0.1em
+    line-height: 21px
+
+  header .phone
+    margin: 0 20px 0 0
+
+  .callback-box
+    margin: 57px 0 0
+
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 745px)
   .info-section__box
     width: 400px
-    margin: 0 0 33px
-    &:last-child
-      margin: 0 -40% 33px 0
+    min-width: 400px
     .text
       padding: 16px 20px 22px 30px
     h6, .date
@@ -812,8 +911,7 @@
     .image
       height: 174px
 
-  .read-also .info-section__content .info-section__box:last-child
-    margin: 0 -34% 40px 0
+
 
   .materials-box
     width: 280px
@@ -821,6 +919,9 @@
 
   .materials-section__wrapper
     justify-content: space-around
+
+  .menu-item
+    width: 100%
 
 @media only screen and (max-width : 690px)
   .header-menu
@@ -855,9 +956,29 @@
       margin: 30px 0 36px
       font-size: 12px
 
+  .main-header
+    .btn-burger
+      display: flex
+      margin-left: 0
+    .header-menu
+      display: none
+    .logo
+      order: -1
+    .phone
+      font-size: 16px
+
+
+
 @media only screen and (max-width : 630px)
   .btn-burger
     display: flex
+
+  .main-header .phone
+    margin: 0
+    font-size: 22px
+    letter-spacing: 0
+
+
 
   .main-header
     .logo, .header-menu, .btn
@@ -881,11 +1002,13 @@
         order: 1
         margin: 21px auto 0
 
-  .menu-item
-    margin: 157px 0 50px 0
+  .menu-item-wrapper
+    padding: 157px 15px 50px
+
 
   .info-section__box
     width: 256px
+    min-width: 256px
 
   .links
     font-size: 13px
@@ -955,8 +1078,16 @@
     padding: 28px 0 0 20px
 
 @media only screen and (max-width : 575px)
+  .menu-item-wrapper
+    padding: 0 15px 15px
+    &:last-child
+      .menu-item
+        margin: 0 auto
+
   .menu-item
-    margin: 0 0 15px
+    width: 223px
+    height: 58px
+    margin: 0 auto
 
   main .title h1
     margin: 21px auto 157px
@@ -970,7 +1101,7 @@
       font-size: 18px
       margin: 8px 0 30px
     .image
-      width: 290px
+      width: 336px
       margin: 0 auto
 
   .about-company
@@ -985,8 +1116,6 @@
 
   .delivery-section
     padding: 0 0 183px
-    -webkit-background-size: contain
-    background-size: contain
     h2
       font-size: 24px
       line-height: 31px
@@ -996,7 +1125,8 @@
 
   .image-location
     margin: 59px auto 0
-    width: 197px
+    max-width: 197px
+    max-height: 121px
 
   form .line .form-group
     width: 100%
@@ -1071,6 +1201,12 @@
 
   .legal-information
     font-size: 15px
+    margin: 27px 0 0
+    line-height: 29px
+
+  .contacts-wrapper .contacts-page .callback-box
+    margin: 30px 0 0
+
 
   .contacts-wrapper form .line .form-group
     width: 100%
@@ -1119,6 +1255,20 @@
     font-size: 12px
     line-height: 18px
 
+  .contacts-wrapper .contacts-page .contacts-section__box .phone
+    font-size: 61px
+    line-height: 67px
+    margin: 32px 0 27px
+
+  .catalog-wrapper .p-50
+    padding: 0 15px
+
+
+  .info-section__box .description
+    font-size: 14px
+
+  .info-section .title
+    margin: 0 0 35px
 
 @media only screen and (max-width : 480px)
   main
@@ -1188,6 +1338,12 @@
     button
       width: 100%
 
+  .phone
+    letter-spacing: 0
+    font-size: 22px
+    line-height: 26px
+
+
 
 @media only screen and (max-width : 380px)
   main .bg-top img, main .bg-center img, main .bg-bottom img
@@ -1197,20 +1353,35 @@
   .advantages-box
     margin: 0 0 30px
 
-  main .bg-top, main .bg-center, main .bg-bottom
+  main .bg-center
     align-items: center
     width: 455px
-    left: -10%
-    top: -11%
+    left: 50%
+    transform: translate(-50%,0)
+    bottom: 56px
+
+  main .bg-top
+    align-items: center
+    width: 455px
+    left: 50%
+    transform: translate(-50%,0)
+    bottom: 30px
+
+  main .bg-bottom
+    justify-content: flex-start
+    align-items: flex-start
+    top: 37px
+
 
   main
+    background: linear-gradient(180deg, #FFFFFF 17.19%, rgba(255, 255, 255, 0) 82.81%)
     height: auto
     .align-self-end
       background: #000
 
-  .menu-item
-    width: 223px
-    margin: 0 auto 15px
+  .menu-item-wrapper
+    padding: 0 15px 15px
+    background: #000
 
   .delivery-section
     padding: 0 0 150px
@@ -1237,3 +1408,28 @@
     .name
       font-size: 18px
       padding: 35px 0 0 14px
+
+  .modal-dialog
+    margin: auto
+
+  .about
+    .image
+      margin: 0 auto 0 -30px
+
+  .info-section h2
+    font-size: 24px
+
+  .contacts-section__box .phone
+    margin: 31px 0 33px
+
+  .callback-box
+    margin: 50px 0 0
+
+  .mail
+    font-size: 15px
+    .icon
+      width: 25px
+      margin: 0 12px 0 0
+
+  .callback-box .description
+    margin: 40px 0
